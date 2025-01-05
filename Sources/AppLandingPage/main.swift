@@ -17,7 +17,7 @@ struct AppLandingPage: Website {
     }
 
     // Update these properties to configure your website:
-    var url = URL(string: "https://collino.github.io")!
+    var url = URL(string: "https://lucasfarah.dev/collinoapp.github.io/")!
     var name = "Collino"
     var description = "Make game nights perfect with Collino! Manage your collection, scan games to learn quickly, and keep everything organized for seamless fun."
     var language: Language { .english }
@@ -49,5 +49,9 @@ extension Website {
 }
 
 // This will generate your website using the built-in Foundation theme:
-try AppLandingPage().publish(withTheme: .landingpage)
+try AppLandingPage().publish(withTheme: .landingpage,
+                             additionalSteps: [
+                                 .deploy(using: .gitHub("lfarah/collinoapp.github.io", useSSH: false))
+                             ]
+)
 
