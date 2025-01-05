@@ -17,16 +17,16 @@ struct AppLandingPage: Website {
     }
 
     // Update these properties to configure your website:
-    var url = URL(string: "https://app-landingpage-demo.bearologics.dev/")!
-    var name = "Fantasy App"
-    var description = "A project I've been working on (in my dreams) for ages, soon available on iOS, iPadOS, macOS and also watchOS! Oh did I forget to mention tvOS?"
+    var url = URL(string: "https://collino.github.io")!
+    var name = "Collino"
+    var description = "Make game nights perfect with Collino! Manage your collection, scan games to learn quickly, and keep everything organized for seamless fun."
     var language: Language { .english }
     var imagePath: Path? { nil }
 }
 
 extension Website {
     var appStoreLink: AppStoreLink? {
-        nil //"https://itunes.apple.com/xyz"
+        "https://apps.apple.com/us/app/collino/id6739600352"
     }
     
     var testflightLink: AppStoreLink? {
@@ -34,16 +34,16 @@ extension Website {
     }
     
     var plausibleSiteName: String? {
-        nil
+        "Collino"
     }
 
     var credits: Link {
-        ("Some Developer(s)", "https://")
+        ("Lucas Farah", "https://lucasfarah.dev")
     }
     
     var footerLinks: [Link] {
         [(name: "Home", url: "/"),
-        (name: "Support", url: "mailto:"),
+        (name: "Support", url: "mailto:feedback@lucasfarah.dev"),
         (name: "About", url: "/about")]
     }
 }
